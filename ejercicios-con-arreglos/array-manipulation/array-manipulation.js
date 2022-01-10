@@ -1,20 +1,20 @@
-const obtenerValorMaximo = (arreglo, numeroDeElementosDelArrayResultante) => {
-    const arrayResultante =[]
+const getTheMaximumValue = (queries, numberOfElementOfResultingArray) => {
+    const resultingArray =[]
     
-    for (let index = 0; index < numeroDeElementosDelArrayResultante; index++) {
+    for (let index = 0; index < numberOfElementOfResultingArray; index++) {
         const valor = 0
-        arrayResultante.push(valor)
+        resultingArray.push(valor)
     }
-    arreglo.forEach(element => {
-        for (let posicionInicial = element[0]-1; posicionInicial < element[1]; posicionInicial++) { 
-            arrayResultante[posicionInicial] = arrayResultante[posicionInicial]+element[2]
+    queries.forEach(element => {
+        for (let position = element[0]-1; position < element[1]; position++) { 
+            resultingArray[position] = resultingArray[position]+element[2]
         }
         
     });
 
-    const valorMaximo = Math.max(...arrayResultante) 
+    const valorMaximo = Math.max(...resultingArray) 
    return valorMaximo
 
 }
 
-module.exports = obtenerValorMaximo
+module.exports = getTheMaximumValue
