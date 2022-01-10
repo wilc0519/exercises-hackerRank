@@ -1,12 +1,12 @@
-const obtenerValorMaximo = require("../array-manipulation")
+const getTheMaximumValue = require("../array-manipulation")
 
-test(`dado el arreglo [[1,3,5], [4,8,7], [6,9,1]] despues de las operaciones se espera
-que el valor maximo del array resultante sea igual a 10` ,() => {
+test(`given the array [[1,3,5], [4,8,7], [6,9,1]] after the operations, 
+the maximum value of the resulting array is expected to be equal to 10 ` ,() => {
 
     const numberOfElementOfResultingArray = 10
-    const arreglo = [[1,5,3], [4,8,7], [6,9,1]]
+    const queries = [[1,5,3], [4,8,7], [6,9,1]]
 
-    const maximumValue = obtenerValorMaximo(arreglo, numberOfElementOfResultingArray)
+    const maximumValue = getTheMaximumValue(queries, numberOfElementOfResultingArray)
 
     expect(maximumValue).toEqual(10)
 })
